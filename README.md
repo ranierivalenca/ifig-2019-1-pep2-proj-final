@@ -9,6 +9,7 @@ O sistema deve ter as seguintes tabelas:
 - Disciplina: tabela de disciplinas dos cursos
   - Nome da disciplina
   - Carga horária
+  - Período da disciplina
 - Professor: tabela de professores
   - Nome do professor
   - cpf
