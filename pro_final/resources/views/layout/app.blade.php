@@ -26,6 +26,14 @@
                         <a class="dropdown-item" href="{{route('disciplina.index')}}">Ver</a>
                         <a class="dropdown-item" href="#">Adicionar Disciplinas</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Turmas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{route('turmas.listar')}}">Ver</a>
+                        <a class="dropdown-item" href="{{route('turmas.cadastrar')}}">Adicionar Turmas</a>
+                </li>
             </ul>
             <ul class="form-inline my-2 my-lg-0">
                 <li class="nav-item">

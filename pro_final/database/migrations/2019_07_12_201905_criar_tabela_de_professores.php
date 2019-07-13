@@ -14,7 +14,7 @@ class CriarTabelaDeProfessores extends Migration
     public function up()
     {
         Schema::create('professor', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('nomeDoProfessor');
             $table->string('cpf');
             $table->string('email');
