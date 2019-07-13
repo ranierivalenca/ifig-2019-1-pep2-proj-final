@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::view('/', 'home')->name('home');
+
+Route::prefix('disciplinas')->group(function(){
+    Route::get('/', 'DisciplinaController@index')->name('disciplina.index');
 });
