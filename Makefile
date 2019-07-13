@@ -14,6 +14,10 @@ luigi:
 	git config user.name "Luigimartins"
 	git config user.email "luigi.martins.355@gmail.com"
 
+kevin:
+	git config user.name "kevinsousa"
+	git config user.email "kevinsmoura@hotmail.com"
+
 conf:
 	sudo apt-get install php7.2 php7.2-mbstring php7.2-mysql php7.2-intl php7.2-xml composer # isso só serve pra sistemas que usam o apt
 	cd pro_final && composer install --no-scripts
