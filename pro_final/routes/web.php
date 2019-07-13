@@ -16,3 +16,15 @@ Route::view('/', 'home')->name('home');
 Route::prefix('disciplinas')->group(function(){
     Route::get('/', 'DisciplinaController@index')->name('disciplina.index');
 });
+
+Route::prefix('turmas')->group(function(){
+    Route::get('/cadastrar', 'TurmaController@cadastrar')->name('turmas.cadastrar');
+});	
+
+Route::prefix('turmas')->group(function(){
+    Route::get('/salvar', 'TurmaController@salvar')->name('turmas.salvar');
+});	
+
+Route::prefix('turmas')->group(function(){
+    Route::get('/listar', 'TurmaController@listar')->name('turmas.listar');
+});	
