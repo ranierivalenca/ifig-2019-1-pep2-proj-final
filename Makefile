@@ -1,3 +1,7 @@
+conf-git-ricardo:
+	git config --global user.name "ricardomlp"
+	git config --global user.email "cranioscaner@gmail.com"
+
 conf-git-geovane:
 	git config --global user.name "geovanejose"
 	git config --global user.email "geovanejose240899@gmail.com"
