@@ -12,8 +12,8 @@ class CursoSeeder extends Seeder
     public function run()
     {
         Curso::create([
-            'nomeDoCurso'      => 'Informática para Internet',
-            'quantidadeDeCurso'     => 'carlos@especializati.com.br'
+            'nomeDoCurso'      => 'Informática para IadasKJAHskjasdassadlçksdakkjk\zdhxqkwazdxdsnternet',
+            'quantidadeDeCurso'     => 'carlos@espesahGSAcializati.com.br'
         ]);
     }
 }

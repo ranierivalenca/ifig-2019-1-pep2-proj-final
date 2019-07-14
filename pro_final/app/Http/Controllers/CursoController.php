@@ -7,7 +7,9 @@ use App\Curso;
 
 class CursoController extends Controller
 {
+
     public function listar(){
+        global $curso;
 
         $curso = Curso::all();
 
@@ -32,8 +34,8 @@ class CursoController extends Controller
     }
 
     public function remover(Request $request,$id){
-
-          	
-
+        $curso = Curso::find($id);
+        $curso->delete();
+        return redirect()->route('curso.listar');	
     } 
 }

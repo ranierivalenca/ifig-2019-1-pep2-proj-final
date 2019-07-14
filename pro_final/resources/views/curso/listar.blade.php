@@ -18,7 +18,7 @@
 				
 					<td>edite</td>
 					<td>
-						<a href="{{$curso->id}}">X</a> 
+						<a href="{{route('curso.remover',$curso->id)}}">X</a> 
 					</td>
 				</tr>
 			@endforeach
