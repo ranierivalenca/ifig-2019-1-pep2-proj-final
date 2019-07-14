@@ -22,13 +22,14 @@ class DisciplinaController extends Controller
 
     public function create()
     {
-        return View('');
+        return View('disciplinas.cadastrar');
     }
 
     public function save(Request $request)
     {
         $disciplinaData = $request->all();
         $this->disciplina->create($disciplinaData);
+        return redirect()->route('disciplina.index');
     }
 
     public function delete(Disciplica $id)

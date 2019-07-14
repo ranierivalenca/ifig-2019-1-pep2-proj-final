@@ -15,6 +15,8 @@ Route::view('/', 'home')->name('home');
 
 Route::prefix('disciplinas')->group(function(){
     Route::get('/', 'DisciplinaController@index')->name('disciplina.index');
+    Route::get('/create', 'DisciplinaController@create')->name('disciplina.create');
+    Route::post('/', 'DisciplinaController@save')->name('disciplina.save');
 });
 
 Route::prefix('turmas')->group(function(){
