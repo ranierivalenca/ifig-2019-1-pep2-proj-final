@@ -13,7 +13,7 @@ class Turma extends Migration
      */
     public function up()
     {
-        Schema::create('turma', function (Blueprint $table) {
+        Schema::create('turmas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('semestres');
             $table->string('turno');
@@ -22,7 +22,7 @@ class Turma extends Migration
             $table->Integer('professor_id')->unsigned();
             $table->foreign('professor_id')->references('id')->on('professor')->onDelete('cascade');
             
-            $table->Integer('disciplinas_id')->unsigned();
+            $table->bigInteger('disciplinas_id')->unsigned();
             $table->foreign('disciplinas_id')->references('id')->on('disciplinas')->onDelete('cascade');
         });
     }
@@ -34,6 +34,6 @@ class Turma extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('turma');
+        Schema::dropIfExists('turmas');
     }
 }
