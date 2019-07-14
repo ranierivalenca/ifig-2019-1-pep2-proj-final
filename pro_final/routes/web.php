@@ -28,3 +28,13 @@ Route::prefix('turmas')->group(function(){
 Route::prefix('turmas')->group(function(){
     Route::get('/listar', 'TurmaController@listar')->name('turmas.listar');
 });	
+
+
+Route::prefix('curso')->group(function(){
+    Route::get('/listar', 'CursoController@listar')->name('curso.listar');
+});	
+
+
+Route::prefix('curso')->group(function(){
+	Route::get('/remover/{id}','CursoController@remover')->name('curso.remover');
+});	
