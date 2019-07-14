@@ -12,7 +12,7 @@ class CursoSeeder extends Seeder
     public function run()
     {
         Curso::create([
-            'nomeDoCurso'      => 'Informática para IadasKJAHskjasdassadlçksdakkjk\zdhxqkwazdxdsnternet',
+            'nomeDoCurso'      => 'Informática para Iadadsnternet',
             'quantidadeDeCurso'     => 'carlos@espesahGSAcializati.com.br'
         ]);
     }

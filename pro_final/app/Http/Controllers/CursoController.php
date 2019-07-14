@@ -17,23 +17,21 @@ class CursoController extends Controller
 
 	}
 
-    public function cadastrar(){
+    public function preEditar($id){
+        $editarCurso = Curso::where('id',$id)->first(); 
+        return view('curso.editar',compact('editarCurso'));
+    }
 
-    	$professores = DB::table('professor')
-                ->select('id','nomeDoProfessor')
-                ->orderBy('nomeDoProfessor', 'asc')
-                -> get();
+    public function editar(Request $request){
 
-        $disciplinas = DB::table('disciplinas')
-                ->select('id','nome')
-                ->orderBy('nome', 'asc')
-                -> get();
-
-    	return view('turmas.cadastrar', compact('professores', 'disciplinas'));
+        $editar = Curso::find($request->curso_id);
+        $editar->nomeDoCurso = $request->nomeDoCurso;
+        $editar->save();
+        return redirect()->route('curso.listar');
 
     }
 
-    public function remover(Request $request,$id){
+    public function remover($id){
         $curso = Curso::find($id);
         $curso->delete();
         return redirect()->route('curso.listar');	

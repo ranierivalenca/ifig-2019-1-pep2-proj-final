@@ -16,7 +16,11 @@
 				<tr align="center">
 					<td>{{ $curso->nomeDoCurso }}</td>
 				
-					<td>edite</td>
+					<td>
+						<a href="{{route('edit',$curso->id)}}">
+							edite	
+						</a>
+					</td>
 					<td>
 						<a href="{{route('curso.remover',$curso->id)}}">X</a> 
 					</td>

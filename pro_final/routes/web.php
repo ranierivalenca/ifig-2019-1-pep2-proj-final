@@ -38,3 +38,11 @@ Route::prefix('curso')->group(function(){
 Route::prefix('curso')->group(function(){
 	Route::get('/remover/{id}','CursoController@remover')->name('curso.remover');
 });	
+
+Route::prefix('curso')->group(function(){
+	Route::get('/editar/{id}','CursoController@preEditar')->name('edit');
+});
+
+Route::prefix('curso')->group(function(){
+	Route::post('/editar/save','CursoController@editar')->name('editar');
+});
