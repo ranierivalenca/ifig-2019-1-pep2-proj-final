@@ -17,6 +17,9 @@ Route::prefix('disciplinas')->group(function(){
     Route::get('/', 'DisciplinaController@index')->name('disciplina.index');
     Route::get('/create', 'DisciplinaController@create')->name('disciplina.create');
     Route::post('/', 'DisciplinaController@save')->name('disciplina.save');
+    Route::delete('/{id}', 'DisciplinaController@delete')->name('disciplina.delete');
+    Route::get('/edit/{id}', 'DisciplinaController@edit')->name('disciplina.edit');
+    Route::put('/update/{id}', 'DisciplinaController@update')->name('disciplina.update');
 });
 
 Route::prefix('turmas')->group(function(){

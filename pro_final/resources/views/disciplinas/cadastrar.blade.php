@@ -5,7 +5,7 @@
 	<p> Cadastre aqui uma disciplina </p>
 
 	<form class="" action="{{route('disciplina.save')}}" method="POST">
-        
+        @csrf
 		<div class="form-group">
 		    <label> Nome </label>
 		    <input type="text" name="nome" class="form-control" required="">
@@ -23,10 +23,9 @@
 
         <div>
 		    <button class="btn btn-success" type="submit">Adicionar</button>
-            <a href="{{route('home')}}"><button class="btn btn-primary">Voltar</button></a>
         </div>
-
-
 	</form>
+    <br>        
+    <a href="{{route('disciplina.index')}}"><button class="btn btn-primary">Voltar</button></a>
 
 @endsection

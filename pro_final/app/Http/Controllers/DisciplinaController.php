@@ -32,9 +32,23 @@ class DisciplinaController extends Controller
         return redirect()->route('disciplina.index');
     }
 
-    public function delete(Disciplica $id)
+    public function edit(Disciplina $id)
+    {
+        $disciplina = $id;
+        return view('disciplinas.editar', compact('disciplina'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $disciplina = $request->all();
+        $this->disciplina->find($id)->update($disciplina);
+        
+        return redirect()->route('disciplina.index');
+    }
+
+    public function delete(Disciplina $id)
     {
         $id->delete();
-        return true;
+        return redirect()->route('disciplina.index');
     }
 }
