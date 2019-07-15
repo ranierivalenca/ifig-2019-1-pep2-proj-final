@@ -14,7 +14,11 @@
 		<tbody>
 			@foreach ($curso as $curso)
 				<tr align="center">
-					<td>{{ $curso->nomeDoCurso }}</td>
+					<td>
+						<a href="{{route('vizu',$curso->id)}}">
+							{{ $curso->nomeDoCurso }}
+						</a>
+					</td>
 				
 					<td>
 						<a href="{{route('edit',$curso->id)}}">

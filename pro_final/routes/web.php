@@ -46,3 +46,22 @@ Route::prefix('curso')->group(function(){
 Route::prefix('curso')->group(function(){
 	Route::post('/editar/save','CursoController@editar')->name('editar');
 });
+
+
+Route::prefix('vizu')->group(function(){
+	Route::get('/listar/{curso}','vizuController@preListar')->name('vizu');
+});
+
+Route::prefix('vizu')->group(function(){
+	Route::get('/listar/{periodo}','vizuController@listar')->name('vizu.listar');
+});
+
+
+Route::prefix('admin')->group(function(){
+	Route::get('/curso','AdminController@curso')->name('curso');
+	Route::get('/curso/save','AdminController@criarCurso')->name('criarCurso');
+
+	Route::get('/admin','AdminController@admin')->name('admin');
+	Route::get('/estudante','AdminController@estudante')->name('estudante');
+	Route::post('/estudante/save','AdminController@criarEstudante')->name('criarEstudante');
+});

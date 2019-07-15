@@ -13,13 +13,20 @@ class CreateDisciplinasTable extends Migration
      */
     public function up()
     {
-        Schema::create('disciplinas', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('nome');
-            $table->string('carga_horaria');
-            $table->string('periodo');
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('disciplinas'))
+        {
+            Schema::create('disciplinas', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->string('nome');
+                $table->string('carga_horaria');
+                $table->string('periodo');
+                $table->timestamps();
+
+                $table->bigInteger('curso_id')->unsigned();
+                $table->foreign('curso_id')->references('id')->on('curso')->onDelete('cascade');
+            });
+        }
+        
     }
     /**
      * Reverse the migrations.

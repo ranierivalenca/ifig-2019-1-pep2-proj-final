@@ -12,8 +12,8 @@ class CursoSeeder extends Seeder
     public function run()
     {
         Curso::create([
-            'nomeDoCurso'      => 'Informática para Iadadsnternet',
-            'quantidadeDeCurso'     => 'carlos@espesahGSAcializati.com.br'
+            'nomeDoCurso'      => 'Informática para Iadasdlasdlsaxçzdms.sçdzxlfkcçasl;zdkçslx.fkdçal;l\ksdçl;skfc,çlxçsdsldçaskzdçxlqwskd,çcxls;k.xf,çcl;abs(çl\dkçls;kdç\wksdald)sKJAHskjasdassadlçksdakkjk\z dhxqkwazdxdsnternet',
+            'quantidadeDeCurso'     => '8'
         ]);
     }
 }

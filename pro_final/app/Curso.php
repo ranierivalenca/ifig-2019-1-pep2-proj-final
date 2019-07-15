@@ -8,6 +8,6 @@ class Curso extends Model
 {
 	protected $table = 'curso';
     protected $fillable = [
-        'nomeDoCurso', 'quantidadeDeCurso'
+        'nomeDoCurso', 'quantidadeDePeriodos'
     ];
 }

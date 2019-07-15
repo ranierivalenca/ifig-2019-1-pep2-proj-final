@@ -37,11 +37,18 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Curso
+                        Cursos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{route('curso.listar')}}">Ver</a>
-                        <a class="dropdown-item" href="{{route('turmas.cadastrar')}}">Adicionar Turmas</a>
+                        <a class="dropdown-item" href="{{route('curso.listar')}}">Listar Cursos</a>     
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Admistrador
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{route('estudante')}}">criar estudante</a>     
                 </li>
             </ul>
             <ul class="form-inline my-2 my-lg-0">
