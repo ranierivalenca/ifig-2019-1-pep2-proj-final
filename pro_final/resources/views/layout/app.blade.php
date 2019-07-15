@@ -51,6 +51,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{route('estudante')}}">criar estudante</a>
                         <a class="dropdown-item" href="{{route('curso')}}">criar Curso</a>
+                        <a class="dropdown-item" href="{{route('professor')}}">criar Professor</a>
                     </div>
                     
 

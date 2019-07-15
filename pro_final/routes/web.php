@@ -66,7 +66,9 @@ Route::prefix('admin')->group(function(){
 	Route::get('/curso','AdminController@curso')->name('curso');
 	Route::post('/curso/save','AdminController@criarCurso')->name('criarCurso');
 
-	Route::get('/admin','AdminController@admin')->name('admin');
+	Route::get('/professor','AdminController@professor')->name('professor');
+	Route::post('/professor/save','AdminController@criarProfessor')->name('criarProfessor');
+
 	Route::get('/estudante','AdminController@estudante')->name('estudante');
 	Route::post('/estudante/save','AdminController@criarEstudante')->name('criarEstudante');
 });

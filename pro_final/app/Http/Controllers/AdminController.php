@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Professor;
 use App\Estudante;
 use App\Curso;
 
@@ -50,6 +51,17 @@ class AdminController extends Controller
         $curso->save();
 
         return redirect()->route('curso');
+    }
+
+    public function criarProfessor(Request $request){
+        $professor = new Professor();
+        $professor->nomeDoprofessor = $request->nome;
+        $professor->cpf = $request->cpf;
+        $professor->email = $request->email;
+        $professor->senha = $request->senha;
+        $professor->save();
+
+        return redirect()->route('professor');
     }
  
 }
