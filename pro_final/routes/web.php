@@ -64,7 +64,7 @@ Route::prefix('vizu')->group(function(){
 
 Route::prefix('admin')->group(function(){
 	Route::get('/curso','AdminController@curso')->name('curso');
-	Route::get('/curso/save','AdminController@criarCurso')->name('criarCurso');
+	Route::post('/curso/save','AdminController@criarCurso')->name('criarCurso');
 
 	Route::get('/admin','AdminController@admin')->name('admin');
 	Route::get('/estudante','AdminController@estudante')->name('estudante');

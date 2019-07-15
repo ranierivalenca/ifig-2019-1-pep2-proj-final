@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Estudante;
+use App\Curso;
 
 class AdminController extends Controller
 {

@@ -40,7 +40,8 @@
                         Cursos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{route('curso.listar')}}">Listar Cursos</a>     
+                        <a class="dropdown-item" href="{{route('curso.listar')}}">Listar Cursos</a> 
+                    </div>    
                 </li>
 
                 <li class="nav-item dropdown">
@@ -48,8 +49,13 @@
                         Admistrador
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{route('estudante')}}">criar estudante</a>     
+                        <a class="dropdown-item" href="{{route('estudante')}}">criar estudante</a>
+                        <a class="dropdown-item" href="{{route('curso')}}">criar Curso</a>
+                    </div>
+                    
+
                 </li>
+
             </ul>
             <ul class="form-inline my-2 my-lg-0">
                 <li class="nav-item">
